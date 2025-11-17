@@ -1,0 +1,46 @@
+/* CSS completo del portafolio */
+:root{
+  --bg:#0a0a0a;
+  --accent:#ffb54d;
+  --card:#0f0f0f;
+  --muted:#bfbfbf;
+  --glass:rgba(255,255,255,0.06);
+}
+[data-theme="light"]{
+  --bg:#ffffff;
+  --accent:#0aa3ff;
+  --card:#fafafa;
+  --muted:#222;
+  --glass:rgba(0,0,0,0.05);
+}
+
+body{margin:0;font-family:Inter,sans-serif;background:var(--bg);color:var(--muted);transition:0.6s;}
+#loader{position:fixed; inset:0; background:#000; display:flex; align-items:center; justify-content:center; z-index:9999; color:#fff; font-weight:600; letter-spacing:3px;}
+nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);display:flex;gap:28px;padding:8px 18px;border-radius:999px;background:rgba(0,0,0,0.26);backdrop-filter: blur(8px);z-index:1200;}
+nav a{color:var(--muted); font-weight:600;font-size:14px;text-decoration:none;}
+nav a:hover{color:var(--accent);}
+#themeToggle{position:fixed; top:16px; right:16px; cursor:pointer; padding:6px 10px; border-radius:999px; background:var(--glass);}
+.hero{position:relative;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.hero video{position:absolute; inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(40%);}
+.hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.2),rgba(0,0,0,0.45));}
+.hero .content{position:relative; z-index:10;text-align:center;color:#fff;}
+.hero h1{font-size:clamp(28px,6vw,64px);margin:0;}
+.hero p{margin-top:12px;font-size:18px;}
+.cta{margin-top:20px;padding:14px 24px;background:var(--accent);color:#081018;border-radius:12px;text-decoration:none;font-weight:700;display:inline-block;transition:all 0.3s;}
+.cta:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 8px 25px rgba(0,0,0,0.5);}
+section{padding:80px 6%;max-width:1200px;margin:0 auto;}
+h2{margin-bottom:18px;color:var(--muted);font-size:22px;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+.card{background:var(--card);padding:26px;border-radius:14px;transition:transform 0.45s, box-shadow 0.45s;cursor:pointer;backdrop-filter:blur(8px);}
+.card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 20px 60px rgba(0,0,0,0.6);}
+.masonry{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;}
+.masonry-item{break-inside:avoid;margin-bottom:18px;border-radius:12px;overflow:hidden;position:relative;cursor:pointer;transition:transform 0.3s;}
+.masonry-item img{width:100%;display:block;}
+.masonry-item:hover{transform:scale(1.02);}
+.float-hire{position:fixed;bottom:22px;right:22px;background:var(--accent);color:#081018;padding:14px 18px;border-radius:999px;z-index:1500;font-weight:800;box-shadow:0 16px 50px rgba(0,0,0,0.6);transition:transform 0.25s;}
+.float-hire:hover{transform:translateY(-6px);}
+.contact input,.contact textarea{width:100%;padding:14px;margin-top:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:var(--card);color:var(--muted);}
+.contact button{margin-top:12px;padding:12px 18px;background:var(--accent);color:#081018;border:none;border-radius:12px;font-weight:700;cursor:pointer;transition:all 0.3s;}
+.contact button:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 8px 25px rgba(0,0,0,0.5);}
+@media(max-width:1000px){.masonry{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.masonry{grid-template-columns:1fr;}}

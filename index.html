@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rivero FILMS - Producción audiovisual, FPV y narrativa cinematográfica. Freelance premium.">
+<title>Rivero FILMS Premium</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body data-theme="dark">
+
+<div id="loader">RIVERO FILMS</div>
+
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#showreel">Showreel</a>
+  <a href="#portafolio">Portafolio</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+<div id="themeToggle">🌙</div>
+<a class="float-hire" href="#contacto">Contrátame</a>
+
+<main>
+<header id="inicio" class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="https://cdn.coverr.co/videos/coverr-a-man-filming-a-river-4485/1080p.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+  <div class="content">
+    <h1>Rivero FILMS</h1>
+    <p>Producción audiovisual · FPV · Narrativa cinematográfica</p>
+    <a class="cta" href="#contacto">Contacta conmigo</a>
+  </div>
+</header>
+
+<section id="bio">
+  <h2>Sobre mí</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="assets/images/bio.jpg" alt="Rivero">
+      <p>Soy Rivero, director y productor audiovisual especializado en FPV y narrativa cinematográfica. Mi objetivo es crear proyectos que impacten, emocionen y cuenten historias únicas. Trabajo con marcas y creativos que buscan contenido premium y cinematográfico.</p>
+      <a class="cta" href="#contacto">Contacta conmigo</a>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <h2>Servicios</h2>
+  <div class="cards">
+    <div class="card">Producción & Dirección<br><a class="cta" href="#contacto">Contacta</a></div>
+    <div class="card">FPV / Drones<br><a class="cta" href="#contacto">Contacta</a></div>
+    <div class="card">Edición & Color<br><a class="cta" href="#contacto">Contacta</a></div>
+  </div>
+</section>
+
+<section id="showreel">
+  <h2>Showreel</h2>
+  <iframe width="100%" height="520" src="https://www.youtube.com/embed/23SoaBJWgMM?rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+</section>
+
+<section id="portafolio">
+  <h2>Portafolio</h2>
+  <div class="masonry">
+    <div class="masonry-item"><img src="assets/images/portfolio1.jpg" alt=""></div>
+    <div class="masonry-item"><img src="assets/images/portfolio2.jpg" alt=""></div>
+    <div class="masonry-item"><img src="assets/images/portfolio3.jpg" alt=""></div>
+    <div class="masonry-item"><img src="assets/images/portfolio4.jpg" alt=""></div>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <div class="contact">
+    <form action="https://formspree.io/f/xdknqjga" method="POST">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu email" required>
+      <textarea name="mensaje" rows="5" placeholder="Cuéntame tu proyecto" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<div id="chatbot">
+  <h4>Pregúntame 💬</h4>
+  <input type="text" id="userInput" placeholder="¿Qué servicios ofreces?">
+  <button onclick="respond()">Enviar</button>
+  <p id="botResponse"></p>
+</div>
+
+<!-- JS -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>
